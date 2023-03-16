@@ -19,5 +19,9 @@
   "homepage": "https://github.com/ProfessionalLime1144/Chrome-Extension#readme",
   "devDependencies": {
     "nodemon": "^2.0.21"
+  },
+  "dependencies": {
+    "eslint": "^8.36.0",
+    "express": "^4.18.2"
   }
 }
