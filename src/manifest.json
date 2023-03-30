@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT",
+  "version": "1.0",
+
+  "action": {
+    "default_title": "ChatGPT"
+  },
+  "description": "ChatGPT chrome extension",
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://search.brave.com/search*",
+        "https://www.google.com/search*"
+      ],
+      "js": [
+        "contentScript.js"
+      ]
+    }
+  ]
+}

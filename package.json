@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config config/webpack.config.js --watch"
   },
   "repository": {
     "type": "git",
@@ -18,10 +18,14 @@
   },
   "homepage": "https://github.com/ProfessionalLime1144/Chrome-Extension#readme",
   "devDependencies": {
-    "nodemon": "^2.0.21"
+    "copy-webpack-plugin": "^11.0.0",
+    "webpack": "^5.77.0",
+    "webpack-cli": "^5.0.1"
   },
   "dependencies": {
+    "chatgpt": "^5.1.2",
+    "dotenv": "^16.0.3",
     "eslint": "^8.36.0",
-    "express": "^4.18.2"
+    "openai": "^3.2.1"
   }
 }
