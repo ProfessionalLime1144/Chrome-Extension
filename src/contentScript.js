@@ -16,6 +16,14 @@ async function ChatGptResponse(prompt) {
     console.error("Failed to get OpenAI API response:", err);
   }
 }
+// Function to manipulate HTML page to place API response
+function manipulatePage(apiResponse) {
+  document.getElementById("searchCTA").style.color =  "#FFFFFF";
+  document.getElementById("searchCTA").style.backgroundColor =  "#000000";
+  document.getElementById("searchCTA").style.padding =  "24px";
+  document.getElementById("searchCTA").style.fontSize =  "24px";
+  document.getElementById("searchCTA").innerText = apiResponse + "\n\n";
+}
 
 chrome.runtime.sendMessage(
   // This message is sent to background.js when one of the URL's in manifest.json is invoked.
@@ -24,6 +32,6 @@ chrome.runtime.sendMessage(
     // This callback is invoked when the background.js responds with a URL.
     const prompt = await response.search;
     const apiResponse = await ChatGptResponse(prompt);
-    console.log(apiResponse);
-  } 
+    manipulatePage(apiResponse);
+  }
 );
