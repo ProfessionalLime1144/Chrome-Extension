@@ -18,10 +18,10 @@ async function ChatGptResponse(prompt) {
 }
 // Function to manipulate HTML page to place API response
 function manipulatePage(apiResponse) {
-  document.getElementById("searchCTA").style.color =  "#FFFFFF";
-  document.getElementById("searchCTA").style.backgroundColor =  "#000000";
-  document.getElementById("searchCTA").style.padding =  "24px";
-  document.getElementById("searchCTA").style.fontSize =  "24px";
+  document.getElementById("searchCTA").style.color = "#FFFFFF";
+  document.getElementById("searchCTA").style.backgroundColor = "#000000";
+  document.getElementById("searchCTA").style.padding = "24px";
+  document.getElementById("searchCTA").style.fontSize = "24px";
   document.getElementById("searchCTA").innerText = apiResponse + "\n\n";
 }
 
